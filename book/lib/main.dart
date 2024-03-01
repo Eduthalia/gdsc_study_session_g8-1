@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+// import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,31 +8,28 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Lottie.asset('images/Animation - 1703618322655.json'),
-              ElevatedButton(
-                onPressed: () {
-                  const MainPage();
-                },
-                child: const Text('Welcome tothe GDSC book store'),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         body: Center(
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               // Lottie.asset('images/Animation - 1703618322655.json'),
+//               ElevatedButton(
+//                 onPressed: () {
+//                   const MainPage();
+//                 },
+//                 child: const Text('Welcome tothe GDSC book store'),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
 
   @override
   Widget build(BuildContext context) {
@@ -367,8 +364,8 @@ class Animator extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      const Text('cosmos'),
-                      const Text('book by slang'),
+                      const Text('Cosmos'),
+                      const Text('Book by Carl Sagan| 2hr 30min'),
                       const Row(
                         children: [
                           Icon(Icons.star),
@@ -514,20 +511,19 @@ class Imagecontainer extends StatelessWidget {
 
 class Stacked extends StatelessWidget {
   final List<String> images = [
-    'images/rectangle.png',
-    'images/rectangle3.png',
-    'images/rectangle4.png',
-    'images/b.png',
-    'images/rectangle7.png',
+    'images/cosmos.jpg',
+    'images/y.png',
+    'images/m.jpg',
+    'images/r.png',
+    'images/ye.jpg',
   ];
   final List<String> rates = ['5.0', '4.5', '4,0', '5.0', '4.5', '4,0'];
   final List<String> texts = [
-    'Papillion Based On true story',
+    'Cosmos by Ann Duryn',
     'Yebedel kasa Novel',
-    'Mahlet by \n Adam Reta'
-        'Papillion Based On true story',
-    'Yebedel kasa Novel',
-    'Mahlet by Adam Reta'
+    'Mahlet by Adam Reta',
+    'Rich Dad Poor Dad',
+    'Yetekolefebet Kulf'
   ];
 
   @override
@@ -649,19 +645,19 @@ class Imagecontainer2 extends StatelessWidget {
 
 class Stacked2 extends StatelessWidget {
   final List<String> images = [
-    'images/rectangle.png',
-    'images/rectangle3.png',
-    'images/rectangle4.png',
-    'images/rectangle7.png',
     'images/b.png',
+    'images/e.png',
+    'images/le.jpg',
+    'images/r.png',
+    'images/ye.jpg',
   ];
   final List<String> rates = ['5.0', '4.5', '4.0', '5.0', '4.5', '4.0'];
   final List<String> texts = [
     'Born a crime by Trevor Noha',
     'Evolution of the Learning brain',
-    'Born a crime by Trevor Noha',
-    'Evolution of the Learning brain',
-    'Lela sew by Mihret Debebe',
+    'Lela Sew by Mihret Debebe',
+    'Rich Dad Poor Dad',
+    'Yetekolefebet kulf by Mihret Debebe',
   ];
   @override
   Widget build(BuildContext context) {
@@ -731,11 +727,11 @@ class NewsClass extends StatelessWidget {
   //const NewsClass({super.key});
   // NewsClass(this.images, this.texts, {super.key});
   List<String> images = [
-    'images/rectangle.png',
-    'images/rectangle3.png',
-    'images/rectangle4.png',
-    'images/rectangle5.png',
+    'images/r.png',
+    'images/p.png',
+    'images/ye.jpg',
     'images/b.png',
+    'images/y.png',
     // 'images/i6.jpg',
   ];
 
@@ -743,9 +739,9 @@ class NewsClass extends StatelessWidget {
     'Rich Dad and Poor Dad Ro.a',
     'Piyassa Muhamud Ga tebkig',
     'Yetekolefebet Kulf',
-    'Rich Dad and Poor Dad Ro.a',
+    'Born a Crime',
     'Piyassa Muhamud Ga tebkig',
-    'Yetekolefebet Kulf'
+    'Yebedel Kasa'
   ];
   @override
   Widget build(BuildContext context) {
