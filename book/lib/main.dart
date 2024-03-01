@@ -1,38 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+// import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         body: Center(
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               // Lottie.asset('images/Animation - 1703618322655.json'),
+//               ElevatedButton(
+//                 onPressed: () {
+//                   const MainPage();
+//                 },
+//                 child: const Text('Welcome tothe GDSC book store'),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Lottie.asset('images/Animation - 1703618322655.json'),
-              ElevatedButton(
-                onPressed: () {
-                  const MainPage();
-                },
-                child: const Text('Welcome tothe GDSC book store'),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
