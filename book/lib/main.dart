@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:lottie/lottie.dart';
+import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,28 +8,31 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         body: Center(
-//           child: Column(
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               // Lottie.asset('images/Animation - 1703618322655.json'),
-//               ElevatedButton(
-//                 onPressed: () {
-//                   const MainPage();
-//                 },
-//                 child: const Text('Welcome tothe GDSC book store'),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Lottie.asset('images/Animation - 1703618322655.json'),
+              ElevatedButton(
+                onPressed: () {
+                  const MainPage();
+                },
+                child: const Text('Welcome tothe GDSC book store'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -365,18 +368,20 @@ class Animator extends StatelessWidget {
                   child: Column(
                     children: [
                       const Text('Cosmos'),
-                      const Text('Book by Carl Sagan| 2hr 30min'),
+                      const Text('Book by Carl Sagan|    2hr 30min'),
                       const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Icon(Icons.star),
-                          Icon(Icons.star),
-                          Icon(Icons.star),
-                          Icon(Icons.star),
-                          Icon(Icons.star),
+                          Icon(Icons.star, color: Colors.yellow),
+                          Icon(Icons.star, color: Colors.yellow),
+                          Icon(Icons.star, color: Colors.yellow),
+                          Icon(Icons.star, color: Colors.yellow),
+                          Icon(Icons.star, color: Colors.yellow),
                         ],
                       ),
                       const SizedBox(height: 4),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
                             width: 45,
@@ -391,7 +396,7 @@ class Animator extends StatelessWidget {
                             height: 20,
                             decoration:
                                 const BoxDecoration(color: Colors.white),
-                            child: const Icon(Icons.heart_broken),
+                            child: const Icon(Icons.favorite),
                           ),
                           const SizedBox(width: 3),
                           Container(
@@ -428,7 +433,7 @@ class Animator extends StatelessWidget {
                     const ListTile(
                       leading: CircleAvatar(
                         radius: 20.0,
-                        backgroundImage: AssetImage('images/book.png'),
+                        backgroundImage: AssetImage('images/user.png'),
                       ),
                       title: Text('Gemechis'),
                       subtitle: Column(
@@ -443,11 +448,12 @@ class Animator extends StatelessWidget {
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Related Books'),
+                        Text(
+                          'Related Books',
+                        ),
                         Icon(Icons.chevron_right)
                       ],
                     ),
-                    Stacked(),
                     SizedBox(height: 5),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
