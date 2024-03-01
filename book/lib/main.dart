@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(const MyApp());
@@ -6,6 +7,32 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Lottie.asset('images/Animation - 1703618322655.json'),
+              ElevatedButton(
+                onPressed: () {
+                  const MainPage();
+                },
+                child: const Text('Welcome tothe GDSC book store'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -320,6 +347,129 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class Animator extends StatelessWidget {
+  const Animator({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(0.0),
+            child: Column(
+              children: [
+                Image.asset('images/cosmos.jpg'),
+                Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                  ),
+                  child: Column(
+                    children: [
+                      const Text('cosmos'),
+                      const Text('book by slang'),
+                      const Row(
+                        children: [
+                          Icon(Icons.star),
+                          Icon(Icons.star),
+                          Icon(Icons.star),
+                          Icon(Icons.star),
+                          Icon(Icons.star),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      Row(
+                        children: [
+                          Container(
+                            width: 45,
+                            height: 20,
+                            decoration:
+                                const BoxDecoration(color: Colors.white),
+                            child: const Text('Free'),
+                          ),
+                          const SizedBox(width: 3),
+                          Container(
+                            width: 45,
+                            height: 20,
+                            decoration:
+                                const BoxDecoration(color: Colors.white),
+                            child: const Icon(Icons.heart_broken),
+                          ),
+                          const SizedBox(width: 3),
+                          Container(
+                            width: 45,
+                            height: 20,
+                            decoration:
+                                const BoxDecoration(color: Colors.white),
+                            child: const Icon(Icons.share),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                Column(
+                  children: [
+                    const Text('Book Information'),
+                    const Text(
+                        'Cosmos is one of the best selling science books of \n all time. In clear-eyed prose, Sagan reveals a jewel- \n like blue world inhabited by a life form that is just...'),
+                    const SizedBox(height: 10),
+                    Text('About Author'),
+                    SizedBox(height: 10),
+                    const Text(
+                        'Cosmos is one of the best selling science books of \n all time. In clear-eyed prose, Sagan reveals a jewel- \n like blue world inhabited by a life form that is just...'),
+                    SizedBox(height: 15),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('User review'),
+                        Icon(Icons.chevron_right)
+                      ],
+                    ),
+                    SizedBox(height: 5),
+                    const ListTile(
+                      leading: CircleAvatar(
+                        radius: 20.0,
+                        backgroundImage: AssetImage('images/book.png'),
+                      ),
+                      title: Text('Gemechis'),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('This is Amazing Book'),
+                          Text('Oct 2023'),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Related Books'),
+                        Icon(Icons.chevron_right)
+                      ],
+                    ),
+                    Stacked(),
+                    SizedBox(height: 5),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.white,
+                          backgroundColor: Colors.blue),
+                      onPressed: () {},
+                      child: Text('Start Reading'),
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class Ratecontainer extends StatelessWidget {
   // const Ratecontainer({super.key});
   Ratecontainer(this.rate, {super.key});
@@ -415,7 +565,16 @@ class Stacked extends StatelessWidget {
                     children: [
                       Stack(
                         children: [
-                          Imagecontainer([images[index]]),
+                          GestureDetector(
+                              onTap: () {
+                                if (index == 0) {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Animator()));
+                                }
+                              },
+                              child: Imagecontainer([images[index]])),
                           Positioned(
                             top: 7,
                             right: 9,
