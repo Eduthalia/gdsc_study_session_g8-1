@@ -141,7 +141,7 @@ class MyApp extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(120.0, 3.0, 50.0, 3.0),
                             child: Row(
                               children: [
-                                ImageIcon(AssetImage('images/icon1.png'),
+                                ImageIcon(AssetImage('images/map.png'),
                                     color: Colors.white, size: 25.0),
                                 SizedBox(width: 10.0),
                                 Icon(Icons.bookmark,
@@ -261,7 +261,7 @@ class MyApp extends StatelessWidget {
                               Padding(
                                 padding:
                                     EdgeInsets.fromLTRB(15.0, 4.0, 7.0, 4.0),
-                                child: ImageIcon(AssetImage('images/cpu.png'),
+                                child: ImageIcon(AssetImage('images/tec.png'),
                                     color: Colors.black),
                               ),
                               Text('Technology',
@@ -285,7 +285,7 @@ class MyApp extends StatelessWidget {
                                 padding:
                                     EdgeInsets.fromLTRB(15.0, 4.0, 7.0, 4.0),
                                 child: ImageIcon(
-                                  AssetImage('images/life (1).png'),
+                                  AssetImage('images/phi.png'),
                                   color: Colors.black,
                                 ),
                               ),
@@ -344,8 +344,8 @@ class Imagecontainer extends StatelessWidget {
   // const Ratecontainer({super.key});
   Imagecontainer(this.image, {super.key});
   List<String> image = [
-    'images/i1.jpg',
-    'images/i2.jpg',
+    'images/b.png',
+    'images/b.png',
   ];
   @override
   Widget build(BuildContext context) {
@@ -364,11 +364,11 @@ class Imagecontainer extends StatelessWidget {
 
 class Stacked extends StatelessWidget {
   final List<String> images = [
-    'images/i1.jpg',
-    'images/i2.jpg',
-    'images/i3.jpg',
-    'images/i1.jpg',
-    'images/i2.jpg',
+    'images/rectangle.png',
+    'images/rectangle3.png',
+    'images/rectangle4.png',
+    'images/b.png',
+    'images/rectangle7.png',
   ];
   final List<String> rates = ['5.0', '4.5', '4,0', '5.0', '4.5', '4,0'];
   final List<String> texts = [
@@ -470,9 +470,9 @@ class Imagecontainer2 extends StatelessWidget {
   // const Ratecontainer({super.key});
   Imagecontainer2(this.image, {super.key});
   List<String> image = [
-    'images/i7.jpg',
-    'images/i8.jpg',
-    'images/i9,jpg',
+    'images/rectangle4.png',
+    'images/rectangle.png',
+    'images/b.png',
   ];
   @override
   Widget build(BuildContext context) {
@@ -490,20 +490,19 @@ class Imagecontainer2 extends StatelessWidget {
 
 class Stacked2 extends StatelessWidget {
   final List<String> images = [
-    'images/i7.jpg',
-    'images/i8.jpg',
-    'images/i9.jpg',
-    'images/i7.jpg',
-    'images/i8.jpg',
+    'images/rectangle.png',
+    'images/rectangle3.png',
+    'images/rectangle4.png',
+    'images/rectangle7.png',
+    'images/b.png',
   ];
   final List<String> rates = ['5.0', '4.5', '4.0', '5.0', '4.5', '4.0'];
   final List<String> texts = [
     'Born a crime by Trevor Noha',
     'Evolution of the Learning brain',
-    'Lela sew by Mihret Debebe'
-        'Born a crime by Trevor Noha',
+    'Born a crime by Trevor Noha',
     'Evolution of the Learning brain',
-    'Lela sew by Mihret Debebe'
+    'Lela sew by Mihret Debebe',
   ];
   @override
   Widget build(BuildContext context) {
@@ -573,11 +572,11 @@ class NewsClass extends StatelessWidget {
   //const NewsClass({super.key});
   // NewsClass(this.images, this.texts, {super.key});
   List<String> images = [
-    'images/i4.jpg',
-    'images/i5.jpg',
-    'images/i6.jpg',
-    'images/i4.jpg',
-    'images/i5.jpg',
+    'images/rectangle.png',
+    'images/rectangle3.png',
+    'images/rectangle4.png',
+    'images/rectangle5.png',
+    'images/b.png',
     // 'images/i6.jpg',
   ];
 
@@ -673,9 +672,9 @@ class _NavigationBarState extends State<NavigationBar> {
       items: [
         buildNavItem(image: 'images/web-content.png', label: ''),
         buildNavItem(image: 'images/open-book.png', label: ''),
-        buildNavItem(image: 'images/home-button 1.png', label: ''),
+        buildNavItem(image: 'images/home.png', label: ''),
         buildNavItem(image: 'images/book.png', label: ''),
-        buildNavItem(image: 'images/user (2) 1.png', label: ''),
+        buildNavItem(image: 'images/user.png', label: ''),
       ],
     );
   }
@@ -705,9 +704,9 @@ class _NavigationBarState extends State<NavigationBar> {
   List<String> get items => [
         'images/web-content.png',
         'images/open-book.png',
-        'images/home-button 1.png',
+        'images/home.png',
         'images/book.png',
-        'images/user(2) 1.png',
+        'images/user.png',
       ];
 }
 
